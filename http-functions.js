@@ -41,12 +41,12 @@ function getHTML(options, callback) {
   });
 
 }
-
 var printHTML = function(html) {
 	console.log('Inside printHTML',html);
 };
 
-getHTML(globalOptions, printHTML);
+
+//getHTML(globalOptions, printHTML);
 
 module.exports = getHTML;
 

@@ -7,8 +7,8 @@ var requestOptions = {
   path: '/http-examples/step5.html'
 };
 
-var printHTML = function(html) {
+var print = function(html) {
 	console.log('Inside printHTML',html);
 };
 
-getHTML(requestOptions, printHTML);
+getHTML(requestOptions, print);
