@@ -1,12 +1,17 @@
 
 // while https is built-in to Node, it is a module, so it must be required
 var https = require('https');   
+var requestOptions = {
+  host: 'sytantris.github.io',
+  path: '/http-examples/step3.html'
+};
 
-function getAndPrintHTMLChunks (host, path) {
+
+function getAndPrintHTMLChunks (options) {
   var result = '';
   var requestOptions = {
-    host: host,
-    path: path
+    host: options.host,
+    path: options.path
   };
 
   /* Add your code here */
@@ -37,6 +42,6 @@ https.get(requestOptions, function (response) {
 }
 
 
-getAndPrintHTMLChunks('sytantris.github.io','/http-examples/step1.html');
+getAndPrintHTMLChunks(requestOptions);
 
 
