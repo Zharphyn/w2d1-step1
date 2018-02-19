@@ -37,11 +37,21 @@ https.get(requestOptions, function (response) {
 
 });
 
+function getHTML (options, callback) {
+	callback(getAndPrintHTMLChunks(options));
+  
+
+}
+
+function printHTML (html) {
+  console.log(html);
+}
+
 
 
 }
 
 
-getAndPrintHTMLChunks(requestOptions);
+getHTML(requestOptions, printHTML(html));
 
 
